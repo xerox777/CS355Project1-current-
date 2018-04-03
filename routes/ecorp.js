@@ -9,7 +9,7 @@ router.get('/all', function(req, res, next){
             res.send(err);
         } else {
             console.log(result);
-            res.render('ecorp_view_all');
+            res.render('ecorp_view_all', {Ecorp: result});
         }
     })
 });
@@ -24,7 +24,7 @@ router.get('/insert', function(req, res) {
             console.log(err);
             res.send(err);
         } else {
-            res.redirect(302, 'ecorp_view_all');
+            res.redirect(302, '/ecorp/all');//, {Ecorp: result});
         }
     });
 });
