@@ -5,5 +5,23 @@
 </head>
     <body>
         <h1>All Ecorp Info</h1>
+        <table border="1">
+            <tr>
+                <th>Address</th>
+                <th>Stock Trends</th>
+                <th>Street</th>
+                <th>Zip Code</th>
+                <th>City</th>
+            </tr>
+            <% for(var i = 0; i < ecorps.length; i++) { %>
+                <tr>
+                    <td><%= ecorps[i].address %></td>
+                    <td><%= ecorps[i].stock_trends %></td>
+                    <td><%= ecorps[i].street %></td>
+                    <td><%= ecorps[i].zip_code %></td>
+                    <td><%= ecorps[i].city %></d>
+                </tr>
+            <% } %>
+        </table>
     </body>
 </html>
