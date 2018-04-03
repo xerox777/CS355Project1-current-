@@ -10,6 +10,7 @@ exports.getAll = function(callback) {
         callback(err, result);
     });
 };
+
 exports.insert = function(params, callback) {
     var query = 'INSERT INTO Ecorp (address, stock_trends, street, zip_code, city) VALUES (?,?,?,?,?)';
     var queryData = [params.address,  params.stock_trends, params.street, params.zip_code, params.city];
