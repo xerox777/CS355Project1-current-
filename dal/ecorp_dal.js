@@ -9,5 +9,16 @@ exports.getAll = function(callback) {
     connection.query(query, function(err, result){
         callback(err, result);
     });
+
+exports.insert = function(params, callback) {
+    var query = 'INSERT INTO ecorp (address, stock_trends, street, zip_code, city) VALUES (?,?,?,?,?)';
+    var queryData = [params.address,  params.stock_trends, params.street, params.zip_code, params.city];
+
+    connection.query(query, queryData, function(err, result) {
+        callback(err, result);
+    });
+
+};
+
 };
 

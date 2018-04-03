@@ -9,7 +9,7 @@ router.get('/all', function(req, res, next){
             res.send(err);
         } else {
             console.log(result);
-            res.render('ecorp/ecorp_view_all');
+            res.render('ecorp_view_all');
         }
     })
 });
@@ -17,5 +17,17 @@ router.get('/all', function(req, res, next){
 router.get('/add', function(req, res) {
     res.render('ecorp_add');
 });
+
+router.get('/insert', function(req, res) {
+    ecorp_dal.insert(req.query, function(err, result) {
+        if(err){
+            console.log(err);
+            res.send(err);
+        } else {
+            res.redirect(302, 'ecorp_view_all');
+        }
+    });
+});
+
 
 module.exports = router;
