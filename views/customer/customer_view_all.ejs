@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer - View All</title>
+</head>
+    <body>
+        <h1>All Customer Info</h1>
+        <table border="1">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Address</th>
+                <th>Subscription(s)</th>
+            </tr>
+            <% for(var i = 0; i < customer.length; i++) { %>
+                <tr>
+                    <td><%= customer[i].fname %></td>
+                    <td><%= customer[i].lname %></td>
+                    <td><%= customer[i].address %></td>
+                    <td><%= customer[i].subscription %></td>
+                </tr>
+            <% } %>
+        </table>
+    </body>
+</html>
