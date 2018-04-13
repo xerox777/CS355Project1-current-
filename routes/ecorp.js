@@ -9,13 +9,13 @@ router.get('/all', function(req, res, next){
             res.send(err);
         } else {
             console.log(result);
-            res.render('ecorp_view_all', {Ecorp: result});
+            res.render('ecorp/ecorp_view_all', {Ecorp: result});
         }
     })
 });
 
 router.get('/add', function(req, res) {
-    res.render('ecorp_add');
+    res.render('ecorp/ecorp_add');
 });
 
 router.get('/insert', function(req, res) {

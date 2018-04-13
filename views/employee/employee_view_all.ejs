@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee - View All</title>
+</head>
+    <body>
+        <h1>All Employee Info</h1>
+        <table border="1">
+            <tr>
+                <th>SSN</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Street</th>
+                <th>City</th>
+                <th>Zip Code</th>
+            </tr>
+            <% for(var i = 0; i < employee.length; i++) { %>
+                <tr>
+                    <td><%= employee[i].employee_id %></td>
+                    <td><%= employee[i].ssn %></td>
+                    <td><%= employee[i].fname %></td>
+                    <td><%= employee[i].lname %></td>
+                    <td><%= employee[i].street %></d>
+                    <td><%= employee[i].zip %></d>
+                </tr>
+            <% } %>
+        </table>
+    </body>
+</html>
