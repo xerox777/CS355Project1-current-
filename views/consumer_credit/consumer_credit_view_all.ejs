@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer - View All</title>
+</head>
+    <body>
+        <h1>All Consumer Credit Info</h1>
+        <table border="1">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Credit Score</th>
+                <th>Amount Owed (for the month)</th>
+            </tr>
+            <% for(var i = 0; i < consumer_credit.length; i++) { %>
+                <tr>
+                    <td><%= consumer_credit[i].fname %></td>
+                    <td><%= consumer_credit[i].lname %></td>
+                    <td><%= consumer_credit[i].credit_score %></td>
+                    <td><%= consumer_credit[i].amount_owed %></td>
+                </tr>
+            <% } %>
+        </table>
+    </body>
+</html>
