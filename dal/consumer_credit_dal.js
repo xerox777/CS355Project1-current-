@@ -12,8 +12,8 @@ exports.getAll = function(callback) {
 };
 
 exports.insert = function(params, callback) {
-    var query = 'INSERT INTO consumer_credit (fname, lname, credit_score, money_owed) VALUES (?,?,?,?)';
-    var queryData = [params.fname, params.lname, params.credit_score, params.money_owed];
+    var query = 'INSERT INTO consumer_credit (fname, lname, credit_score, amount_owed, ecorp_id) VALUES (?,?,?,?,?)';
+    var queryData = [params.fname, params.lname, params.credit_score, params.amount_owed, params.ecorp_id];
 
     connection.query(query, queryData, function(err, result) {
         callback(err, result);

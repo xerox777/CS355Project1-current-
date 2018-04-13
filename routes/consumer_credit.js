@@ -15,7 +15,7 @@ router.get('/all', function(req, res, next){
 });
 
 router.get('/add', function(req, res) {
-    res.render('consumer/consumer_credit_add');
+    res.render('consumer_credit/consumer_credit_add');
 });
 
 router.get('/insert', function(req, res) {

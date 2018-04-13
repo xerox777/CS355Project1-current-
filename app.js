@@ -10,6 +10,7 @@ var users = require('./routes/users');
 var ecorp = require('./routes/ecorp');
 var employee = require('./routes/employee');
 var customer = require('./routes/customer');
+var consumer_credit = require('./routes/consumer_credit');
 
 var app = express();
 
@@ -32,7 +33,7 @@ app.use('/users', users);
 app.use('/ecorp', ecorp);
 app.use('/employee', employee);
 app.use('/customer', customer);
-
+app.use('/consumer_credit', consumer_credit);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
