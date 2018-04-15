@@ -7,27 +7,30 @@
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          <style>.right{float: right; margin-left:10px;}</style>
 </head>
     <body>
         <h1>Add New Customer Info</h1>
         <form action="/customer/insert" method="get">
-                First Name: <input name="fname" type="text" />
+              <fieldset style="margin-top:10px;">
+                <label for ="fname">First Name: <input class ="right" name="fname" type="text" />
                 <br />
-                Last Name: <input name="lname" type="text" />
+                <label for ="lname">Last Name: <input class="right" name="lname" type="text" />
                 <br />
-                Address: <input name="address" type="text" />
+                <label for ="address">Address: <input class="right" name="address" type="text" />
                 <br />
-                City: <input name="city" type="text" />
+                <label for ="city">City: <input class="right" name="city" type="text" />
                 <br />
-                State: <input name="state" type="text" />
+                <label for ="state">State: <input class="right" name="state" type="text" />
                 <br />
-                zip: <input name="zip" type="text" />
+                <label for ="zip">zip: <input class="right" name="zip" type="text" />
                 <br />
-                Subscription Amount: <input name="subscription_amount" type="text" />
+                <label for ="subscription_amount">Subscription Amount: <input class="right" name="subscription_amount" type="text" />
                 <br />
-                Subscription Description: <input name="description" type="text" />
+                <label for ="description">Subscription Description: <input class="right" name="description" type="text" />
                 <br />
                 <input type="submit" />
+                </fieldset>
          </form>
     </body>
 </html>
