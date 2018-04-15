@@ -2,26 +2,32 @@
 <html>
 <head>
     <title>Ecorp - View All</title>
+      <title>Bootstrap Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
     <body>
         <h1>All Ecorp Info</h1>
         <table border="1">
             <tr>
-                <th>Business Partners</th>
-                <th>Stock Trends</th>
-                <th>Street</th>
-                <th>City</th>
-                <th>State</th>
-                <th>Zip Code</th>
+                <th style="background-color: purple; color: white";>Business Partners</th>
+                <th style="background-color: purple; color: white";>Stock Trends</th>
+                <th style="background-color: purple; color: white";>Street</th>
+                <th style="background-color: purple; color: white";>City</th>
+                <th style="background-color: purple; color: white";>State</th>
+                <th style="background-color: purple; color: white";>Zip Code</th>
             </tr>
             <% for(var i = 0; i < Ecorp.length; i++) { %>
                 <tr>
-                    <td><%= Ecorp[i].partner %></td>
-                    <td><%= Ecorp[i].stock_trends %></td>
-                    <td><%= Ecorp[i].street %></td>
-                    <td><%= Ecorp[i].city %></d>
-                    <td><%= Ecorp[i].state %></td>
-                    <td><%= Ecorp[i].zip_code %></td>
+                    <td style="background-color: cyan; color: black";><%= Ecorp[i].partner %></td>
+                    <td style="background-color: cyan; color: black";><%= Ecorp[i].stock_trends %></td>
+                    <td style="background-color: cyan; color: black";><%= Ecorp[i].street %></td>
+                    <td style="background-color: cyan; color: black";><%= Ecorp[i].city %></d>
+                    <td style="background-color: cyan; color: black";><%= Ecorp[i].state %></td>
+                    <td style="background-color: cyan; color: black";><%= Ecorp[i].zip_code %></td>
                 </tr>
             <% } %>
         </table>
