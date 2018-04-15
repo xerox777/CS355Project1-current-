@@ -10,14 +10,22 @@
                        <th>First Name</th>
                        <th>Last Name</th>
                        <th>Address</th>
-                       <th>Subscription(s)</th>
+                       <th>City</th>
+                       <th>State</th>
+                       <th>Zip</th>
+                       <th>Subscription Amount</th>
+                       <th>Subscription Description</th>
                    </tr>
                    <% for(var i = 0; i < customer.length; i++) { %>
                        <tr>
                            <td><%= customer[i].fname %></td>
                            <td><%= customer[i].lname %></td>
                            <td><%= customer[i].address %></td>
-                           <td><%= customer[i].subscription %></td>
+                           <td><%= customer[i].city %></td>
+                           <td><%= customer[i].state %></td>
+                           <td><%= customer[i].zip %></td>
+                           <td><%= customer[i].subscription_amount %></td>
+                           <td><%= customer[i].description %></td>
                        </tr>
                    <% } %>
                </table>

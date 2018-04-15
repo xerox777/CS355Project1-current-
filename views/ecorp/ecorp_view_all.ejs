@@ -8,20 +8,20 @@
         <table border="1">
             <tr>
                 <th>Business Partners</th>
-                <th>Address</th>
                 <th>Stock Trends</th>
                 <th>Street</th>
-                <th>Zip Code</th>
                 <th>City</th>
+                <th>State</th>
+                <th>Zip Code</th>
             </tr>
             <% for(var i = 0; i < Ecorp.length; i++) { %>
                 <tr>
                     <td><%= Ecorp[i].partner %></td>
-                    <td><%= Ecorp[i].address %></td>
                     <td><%= Ecorp[i].stock_trends %></td>
                     <td><%= Ecorp[i].street %></td>
-                    <td><%= Ecorp[i].zip_code %></td>
                     <td><%= Ecorp[i].city %></d>
+                    <td><%= Ecorp[i].state %></td>
+                    <td><%= Ecorp[i].zip_code %></td>
                 </tr>
             <% } %>
         </table>

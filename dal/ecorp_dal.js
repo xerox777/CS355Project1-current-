@@ -12,8 +12,8 @@ exports.getAll = function(callback) {
 };
 
 exports.insert = function(params, callback) {
-    var query = 'INSERT INTO Ecorp (partner, address, stock_trends, street, zip_code, city) VALUES (?,?,?,?,?,?)';
-    var queryData = [params.partner, params.address,  params.stock_trends, params.street, params.zip_code, params.city];
+    var query = 'INSERT INTO Ecorp (partner, stock_trends, street, zip_code, city, state) VALUES (?,?,?,?,?,?)';
+    var queryData = [params.partner, params.stock_trends, params.street, params.zip_code, params.city, params.state];
 
     connection.query(query, queryData, function(err, result) {
         callback(err, result);
