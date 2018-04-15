@@ -7,23 +7,28 @@
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                <style>.right{float: right; margin-left:57px;}</style>
 </head>
     <body>
         <h1>Add New Ecorp Info</h1>
         <form action="/ecorp/insert" method="get">
-                Business Partner: <input name="partner" type="text" />
+                 <div style="border:1px solid black; width:400px;">
+                 <fieldset style="margin-top:10px;">
+                <label for = "partner">Business Partner: <input style="margin-right:10px;" name="partner" type="text" />
                 <br />
-                Stock Trends: <input name="stock_trends" type="text" />
+                <label for = "stock_trends">Stock Trends: <input style="margin-left:-20px;" class="right" name="stock_trends" type="text" />
                 <br />
-                Street: <input name="street" type="text" />
+                <label for = "street">Street: <input class="right" name="street" type="text" />
                 <br />
-                City: <input name="city" type="text" />
+                <label for = "city">City: <input class="right" name="city" type="text" />
                 <br />
-                State: <input name="state" type="text" />
+                <label for = "state">State: <input class="right" name="state" type="text" />
                 <br />
-                Zip Code: <input name="zip_code" type="text" />
+                <label for = "zip_code">Zip Code: <input class="right" name="zip_code" type="text" />
                 <br />
                 <input type="submit" />
+                </fieldset>
+                </div>
          </form>
     </body>
 </html>
