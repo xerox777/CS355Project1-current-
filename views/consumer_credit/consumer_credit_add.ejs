@@ -7,21 +7,26 @@
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          <style>.right{float: right; margin-left:10px;}</style>
 </head>
     <body>
         <h1>Add New Consumer Credit Info</h1>
         <form action="/consumer_credit/insert" method="get">
-                First Name: <input name="fname" type="text" />
+        <div style="border:1px solid black; width:400px;">
+         <fieldset style="margin-left:10px;">
+                <label for="fname">First Name: <input class="right" name="fname" type="text" />
                 <br />
-                Last Name: <input name="lname" type="text" />
+                <label for="lname">Last Name: <input class="right" name="lname" type="text" />
                 <br />
-                Credit Score: <input name="credit_score" type="text" />
+                <label for="credit_score">Credit Score: <input class="right" name="credit_score" type="text" />
                 <br />
-                Amount Owed (for the month): <input name="amount_owed" type="text" />
+                <label for="amount_owed">Amount Owed (for the month): <input class="right" name="amount_owed" type="text" />
                 <br />
-                Ecorp Id: <input name="ecorp_id" type="text" />
+                <label for="ecorp_id">Ecorp Id: <input style="margin-left:152px;" class="right" name="ecorp_id" type="text" />
                 <br />
                 <input type="submit" />
+                </fieldset>
+                </div>
          </form>
     </body>
 </html>
