@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ecorp - View All</title>
+</head>
+    <body>
+        <h1>All Ecorp Info</h1>
+        <table border="1">
+            <tr>
+                <th>Computers</th>
+                <th>Tablets</th>
+                <th>Phones</th>
+                <th>Other</th>
+            </tr>
+            <% for(var i = 0; i < products.length; i++) { %>
+                <tr>
+                    <td><%= products[i].computer %></td>
+                    <td><%= products[i].tablet %></td>
+                    <td><%= products[i].phone %></td>
+                    <td><%= products[i].other %></td>
+                </tr>
+            <% } %>
+        </table>
+    </body>
+</html>
