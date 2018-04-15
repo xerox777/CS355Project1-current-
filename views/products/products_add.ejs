@@ -2,26 +2,31 @@
 <html>
 <head>
     <title>Ecorp - Add</title>
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <style>.right{float: right; margin-left:10px;}</style>
 </head>
     <body>
         <h1>Add New Product Info</h1>
         <form action="/products/insert" method="get">
-                Computer(s): <input name="computer" type="text" />
+         <div style="border:1px solid black; width:400px;">
+         <fieldset style="margin-top:10px;">
+                <label for = "computer">Computer(s): <input style="margin-left:-5px;" class="right" name="computer" type="text"/>
                 <br />
-                Tablet(s): <input name="tablet" type="text" />
+                <label for = "tablet">Tablet(s): <input class="right" name="tablet" type="text"/>
                 <br />
-                Phone(s): <input name="phone" type="text" />
+                <label for = "phone">Phone(s): <input class="right" name="phone" type="text"/>
                 <br />
-                Other: <input name="other" type="text" />
+                <label for = "other">Other: <input class="right" name="other" type="text"/>
                 <br />
-                Evil Corp ID: <input name="ecorp_id" type="text" />
+                <label for="ecorp_id">Evil Corp ID:<input class="right" name="ecorp_id" type="text"/>
                 <br />
                 <input type="submit" />
+                </fieldset>
+         </div>
          </form>
     </body>
 </html>
