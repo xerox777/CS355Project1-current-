@@ -10,24 +10,28 @@
 
 </head>
     <body style="margin-left:10px;">
-        <h1>All Ecorp Info</h1>
+        <div style="width:225px; margin-left:170px;">
+        <h1 style="color: red; background-color:black;">All Ecorp Info</h1>
+        </div>
         <table border="1">
             <tr>
-                <th style="background-color: purple; color: white";>Business Partners</th>
-                <th style="background-color: purple; color: white";>Stock Trends</th>
-                <th style="background-color: purple; color: white";>Street</th>
-                <th style="background-color: purple; color: white";>City</th>
-                <th style="background-color: purple; color: white";>State</th>
-                <th style="background-color: purple; color: white";>Zip Code</th>
+                <th style="background-color: black; color: red";>Ecorp ID</th>
+                <th style="background-color: black; color: red";>Business Partners</th>
+                <th style="background-color: black; color: red";>Stock Trends</th>
+                <th style="background-color: black; color: red";>Street</th>
+                <th style="background-color: black; color: red";>City</th>
+                <th style="background-color: black; color: red";>State</th>
+                <th style="background-color: black; color: red";>Zip Code</th>
             </tr>
             <% for(var i = 0; i < Ecorp.length; i++) { %>
                 <tr>
-                    <td style="background-color: cyan; color: black";><%= Ecorp[i].partner %></td>
-                    <td style="background-color: cyan; color: black";><%= Ecorp[i].stock_trends %></td>
-                    <td style="background-color: cyan; color: black";><%= Ecorp[i].street %></td>
-                    <td style="background-color: cyan; color: black";><%= Ecorp[i].city %></d>
-                    <td style="background-color: cyan; color: black";><%= Ecorp[i].state %></td>
-                    <td style="background-color: cyan; color: black";><%= Ecorp[i].zip_code %></td>
+                    <td style="color: black";><%= Ecorp[i].ecorp_id %></td>
+                    <td style="color: black";><%= Ecorp[i].partner %></td>
+                    <td style="color: black";><%= Ecorp[i].stock_trends %></td>
+                    <td style="color: black";><%= Ecorp[i].street %></td>
+                    <td style="color: black";><%= Ecorp[i].city %></d>
+                    <td style="color: black";><%= Ecorp[i].state %></td>
+                    <td style="color: black";><%= Ecorp[i].zip_code %></td>
                 </tr>
             <% } %>
         </table>
