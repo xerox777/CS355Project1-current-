@@ -20,9 +20,11 @@
                        <th>Zip</th>
                        <th>Subscription Amount</th>
                        <th>Subscription Description</th>
+                       <th>Evil Corp ID</th>
                    </tr>
                    <% for(var i = 0; i < customer.length; i++) { %>
                        <tr>
+
                            <td><%= customer[i].fname %></td>
                            <td><%= customer[i].lname %></td>
                            <td><%= customer[i].address %></td>
@@ -31,6 +33,7 @@
                            <td><%= customer[i].zip %></td>
                            <td><%= customer[i].subscription_amount %></td>
                            <td><%= customer[i].description %></td>
+                           <td><%= customer[i].ecorp_id %></td>
                        </tr>
                    <% } %>
                </table>

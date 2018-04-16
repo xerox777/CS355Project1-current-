@@ -12,8 +12,8 @@ exports.getAll = function(callback) {
 };
 
 exports.insert = function(params, callback) {
-    var query = 'INSERT INTO customer (fname, lname, address, city, state, zip, subscription_amount, description) VALUES (?,?,?,?,?,?,?,?)';
-    var queryData = [params.fname, params.lname, params.address, params.city, params.state, params.zip, params.subscription_amount, params.description];
+    var query = 'INSERT INTO customer (ecorp_id, fname, lname, address, city, state, zip, subscription_amount, description) VALUES (?,?,?,?,?,?,?,?,?);';
+    var queryData = [params.ecorp_id, params.fname,  params.lname, params.address, params.city, params.state, params.zip, params.subscription_amount, params.description];
 
     connection.query(query, queryData, function(err, result) {
         callback(err, result);
