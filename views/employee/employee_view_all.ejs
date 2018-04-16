@@ -12,6 +12,7 @@
         <h1>All Employee Info</h1>
         <table border="1">
             <tr>
+                <th>Evil Corp ID</th>
                 <th>SSN</th>
                 <th>First Name</th>
                 <th>Last Name</th>
@@ -21,6 +22,7 @@
             </tr>
             <% for(var i = 0; i < employee.length; i++) { %>
                 <tr>
+                    <td><%= employee[i].ecorp_id %></td>
                     <td><%= employee[i].employee_id %></td>
                     <td><%= employee[i].ssn %></td>
                     <td><%= employee[i].fname %></td>

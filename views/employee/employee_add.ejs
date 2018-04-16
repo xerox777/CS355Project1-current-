@@ -7,23 +7,30 @@
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          <style>.right{float: right; margin-left:10px;}</style>
 </head>
     <body>
         <h1>Add New Employee Info</h1>
         <form action="/employee/insert" method="get">
-                SSN: <input name="ssn" type="text" />
+             <div style="width:400px;">
+             <fieldset style="margin-top:10px; margin-left:10px;">
+                <label for = "ecorp_id">Evil Corp ID: <input class="right" name="ecorp_id" type="text" />
                 <br />
-                First Name: <input name="fname" type="text" />
+                <label for = "ssn">SSN: <input class="right" name="ssn" type="text" />
                 <br />
-                Last Name: <input name="lname" type="text" />
+                <label for = "fname">First Name: <input class="right" name="fname" type="text" />
                 <br />
-                Street Address: <input name="street" type="text" />
+                <label for = "lname">Last Name: <input class="right" name="lname" type="text" />
                 <br />
-                City: <input name="city" type="text" />
+                <label for = "street">Street Address: <input class="right" name="street" type="text" />
                 <br />
-                Zip Code: <input name="zip" type="text" />
+                <label for = "city">City: <input style="margin-left:100px;" class="right" name="city" type="text" />
                 <br />
-                <input type="submit" />
+                <label for = "zip">Zip Code: <input style="margin-left:100px;" class="right" name="zip" type="text" />
+                <br />
+                <input type="submit" style="color: green; background-color: cyan;" />
+            </fieldset>
+            </div>
          </form>
     </body>
 </html>

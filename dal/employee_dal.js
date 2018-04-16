@@ -12,8 +12,8 @@ exports.getAll = function(callback) {
 };
 
 exports.insert = function(params, callback) {
-    var query = 'INSERT INTO employee (ssn, fname, lname, street, city, zip) VALUES (?,?,?,?,?,?)';
-    var queryData = [params.ssn,  params.fname, params.lname, params.street, params.city, params.zip];
+    var query = 'INSERT INTO employee (ecorp_id, ssn, fname, lname, street, city, zip) VALUES (?,?,?,?,?,?,?)';
+    var queryData = [params.ecorp_id, params.ssn,  params.fname, params.lname, params.street, params.city, params.zip];
 
     connection.query(query, queryData, function(err, result) {
         callback(err, result);
