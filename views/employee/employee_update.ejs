@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee - Edit</title>
+</head>
+<body>
+    <h1>Edit Employee</h1>
+
+    <br />
+    <br />
+    <br />
+    <% for(var i=0; employee.length > i; i++ ) {
+        var checked ="";
+        if(employee[i].employee_id != null) {
+            checked = "checked";
+        }
+    %>
+    <form action="/employee/update" method="get">
+        Evil Corp ID: <input id="ecorp_id" name ="ecorp_id" type="text" value="<%= employee[i].ecorp_id%>" />
+        <br />
+        SSN: <input id="ssn" name="ssn" type="text" value="<%= employee[i].ssn %>"/>
+        <br />
+        First Name: <input id="fname" name="fname" type="text" value="<%= employee[i].fname%>"/>
+        <br />
+        Last Name: <input id="lname" name="lname" type="text" value="<%= employee[i].lname%>"/>
+        <br />
+        Street: <input id="street" name="street" type="text" value="<%= employee[i].street%>"/>
+        <br />
+        City: <input id="city" name="city" type="text" value="<%= employee[i].city%>"/>
+        <br />
+
+        Zip Code: <input id="zip" name="zip" type="text" value="<%= employee[i].zip%>"/>
+            <br />
+            <% } %>
+
+    <input type="submit" />
+      <% for(var i=0; employee.length > i; i++ ) { %>
+        <input type="hidden"
+               id="employee_id"
+               name="employee_id"
+               value="<%= employee[i].employee_id %>"
+        />
+        <% } %>
+</form>
+</body>
+</html>

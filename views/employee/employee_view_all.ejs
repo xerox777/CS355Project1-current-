@@ -21,6 +21,8 @@
                 <th>Street</th>
                 <th>City</th>
                 <th>Zip Code</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
             <% for(var i = 0; i < employee.length; i++) { %>
                 <tr>
@@ -32,6 +34,9 @@
                     <td><%= employee[i].street %></d>
                     <td><%= employee[i].city %></td>
                     <td><%= employee[i].zip %></d>
+                     <td> <a href='/employee/edit?employee_id=<%= employee[i].employee_id %>'> EDIT
+                    </a> </td>
+                    <td>&nbsp;<a href="/employee/delete?employee_id=<%= employee[i].employee_id %>">Delete</a></td
                 </tr>
             <% } %>
         </table>
