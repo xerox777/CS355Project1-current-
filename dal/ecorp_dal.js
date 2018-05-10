@@ -30,6 +30,14 @@ exports.update = function(params, callback){
     });
 };
 
+exports.delete = function(params, callback) {
+    var query = 'DELETE FROM ecorp WHERE ecorp_id = ?';
+    var queryData = [params.ecorp_id];
+    connection.query(query, queryData, function(err, result) {
+        callback(err, result);
+    });
+};
+
 
 exports.getinfo = function(eid, callback) {
     var query = 'CALL ecorp_getinfo(?)';

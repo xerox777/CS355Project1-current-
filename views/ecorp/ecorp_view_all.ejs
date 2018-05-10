@@ -24,6 +24,8 @@
                 <th style="background-color: black; color: red";>City</th>
                 <th style="background-color: black; color: red";>State</th>
                 <th style="background-color: black; color: red";>Zip Code</th>
+                <th style="background-color: black; color: red";>Edit</th>
+                <th style="background-color: black; color: red";>Delete</th>
             </tr>
             <% for(var i = 0; i < Ecorp.length; i++) { %>
                 <tr>
@@ -36,6 +38,8 @@
                     <td style="color: black";><%= Ecorp[i].zip_code %></td>
                     <td> <a href='/ecorp/edit?ecorp_id=<%= Ecorp[i].ecorp_id %>'> EDIT
                     </a> </td>
+                    <td>&nbsp;<a href="/ecorp/delete?ecorp_id=<%= Ecorp[i].ecorp_id %>">Delete</a></td>
+
                 </tr>
             <% } %>
         </table>
