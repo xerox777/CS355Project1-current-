@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ecorp - Edit</title>
+</head>
+<body>
+    <h1>Edit Ecorp</h1>
+
+    <br />
+    <br />
+    <br />
+    <% for(var i=0; Ecorp.length > i; i++ ) {
+        var checked ="";
+        if(Ecorp[i].ecorp_id != null) {
+            checked = "checked";
+        }
+    %>
+    <form action="/ecorp/update" method="get">
+        Business Partners: <input id="partner" name ="partner" type="text" value="<%= Ecorp[i].partner%>" />
+        <br />
+        Stock Trends: <input id="stock_trends" name="stock_trends" type="text" value="<%= Ecorp[i].stock_trends %>"/>
+        <br />
+        Street: <input id="street" name="street" type="text" value="<%= Ecorp[i].street%>"/>
+        <br />
+        City: <input id="city" name="city" type="text" value="<%= Ecorp[i].city%>"/>
+        <br />
+        State: <input id="state" name="state" type="text" value="<%= Ecorp[i].state%>"/>
+        <br />
+        Zip Code: <input id="zip_code" name="zip_code" type="text" value="<%= Ecorp[i].zip_code%>"/>
+            <br />
+            <% } %>
+
+    <input type="submit" />
+      <% for(var i=0; Ecorp.length > i; i++ ) { %>
+        <input type="hidden"
+               id="ecorp_id"
+               name="ecorp_id"
+               value="<%= Ecorp[i].ecorp_id %>"
+        />
+        <% } %>
+</form>
+</body>
+</html>

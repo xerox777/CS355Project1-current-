@@ -10,7 +10,7 @@
       <img style="margin-left:157px;" width = "250" height = "250"
       src="https://res.cloudinary.com/teepublic/image/private/s--OvYaBhmQ--/t_Preview/b_rgb:c8e0ec,c_limit,f_jpg,h_630,q_90,w_630/v1477322578/production/designs/751218_1.jpg"/>
 </head>
-    <body style="margin-left:10px;">
+    <body style="margin-left:10px; background-color:lime">
 
         <div style="width:225px; margin-left:170px;">
         <h1 style="color: red; background-color:black;">All Ecorp Info</h1>
@@ -34,6 +34,8 @@
                     <td style="color: black";><%= Ecorp[i].city %></d>
                     <td style="color: black";><%= Ecorp[i].state %></td>
                     <td style="color: black";><%= Ecorp[i].zip_code %></td>
+                    <td> <a href='/ecorp/edit?ecorp_id=<%= Ecorp[i].ecorp_id %>'> EDIT
+                    </a> </td>
                 </tr>
             <% } %>
         </table>

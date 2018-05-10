@@ -30,4 +30,26 @@ router.get('/insert', function(req, res) {
 });
 
 
+router.get('/edit', function(req, res) {
+    ecorp_dal.getinfo(req.query.ecorp_id, function(err, result){
+        if(err) {res.send(err); }
+        else {
+            res.render('ecorp/ecorp_update', {
+                Ecorp: result[0],
+                ecorp_result: result[0][0]
+            });
+        }
+    });
+});
+
+router.get('/update', function(req, res) {
+    ecorp_dal.update(req.query, function(err, result){
+        if(err){
+            res.send(err);
+        } else {
+            res.redirect(302, '/ecorp/all');
+        }
+    });
+});
+
 module.exports = router;

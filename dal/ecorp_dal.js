@@ -21,5 +21,21 @@ exports.insert = function(params, callback) {
 
 };
 
+exports.update = function(params, callback){
+    var query = 'UPDATE ecorp SET partner = ?, stock_trends = ?, street = ?, zip_code = ?, city = ?, state = ? WHERE ecorp_id = ?';
+    var queryData = [params.partner, params.stock_trends, params.street, params.zip_code, params.city, params.state, params.ecorp_id];
+    connection.query(query, queryData, function(err, result) {
+        callback(err, result);
+
+    });
+};
 
 
+exports.getinfo = function(eid, callback) {
+    var query = 'CALL ecorp_getinfo(?)';
+    var queryData = [eid];
+
+    connection.query(query, queryData, function(err, result) {
+        callback(err, result);
+    });
+};
