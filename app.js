@@ -12,7 +12,7 @@ var employee = require('./routes/employee');
 var customer = require('./routes/customer');
 var consumer_credit = require('./routes/consumer_credit');
 var products = require('./routes/products');
-
+var sql = require('./routes/sql');
 var app = express();
 
 
@@ -36,6 +36,7 @@ app.use('/employee', employee);
 app.use('/customer', customer);
 app.use('/consumer_credit', consumer_credit);
 app.use('/products', products);
+app.use('/sql', sql);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

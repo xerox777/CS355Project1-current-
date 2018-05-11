@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Ecorp DB</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <img style="margin-left:10px;" width = "200" height = "200"
+         src="https://res.cloudinary.com/teepublic/image/private/s--OvYaBhmQ--/t_Preview/b_rgb:c8e0ec,c_limit,f_jpg,h_630,q_90,w_630/v1477322578/production/designs/751218_1.jpg"/>
+</head>
+<body style="background-color:aqua;">
+<br />
+<br />
+<br />
+#1)  A query using a correlated subquery
+<br />
+    CREATE PROCEDURE 1_sql()
+    BEGIN
+    SELECT computer, phone FROM products WHERE ecorp_id < (SELECT MAX(ecorp_id) FROM ecorp);
+    END //
+    DELIMITER;
+<br />
+<br />
+<table border="1">
+    <tr>
+        <th>Computers</th>
+        <th>Phones</th>
+    </tr>
+<% for (var i = 0; i < sql.length; i++) { %>
+    <tr>
+        <td><%= sql[i].computer %></td>
+        <td><%= sql[i].phone %></td>
+    </tr>
+
+<% } %>
+</body>
+</html>
