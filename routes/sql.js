@@ -12,7 +12,7 @@ router.get('/sql1', function(req, res, next){
             res.render('sql/1_sql', {sql: result[0]});
             console.log(result);
         }
-    })
+    });
 });
 
 router.get('/add', function(req, res) {
