@@ -15,6 +15,20 @@ router.get('/sql1', function(req, res, next){
     });
 });
 
+router.get('/sql2', function(req, res, next){
+    sql_dal.get2(function(err, result) {
+        if(err) {
+            console.log(err);
+            res.send(err);
+        } else {
+            console.log(result);
+            res.render('sql/2_sql', {sql: result[0]});
+            console.log(result);
+        }
+    });
+});
+
+
 router.get('/add', function(req, res) {
     res.render('products/products_add');
 });

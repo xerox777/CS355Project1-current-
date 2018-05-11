@@ -12,4 +12,10 @@ exports.get1 = function(callback) {
 };
 
 
+exports.get2 = function(callback) {
+    var query = 'call 2_sql(1)';
 
+    connection.query(query, function (err, result) {
+        callback(err, result);
+    });
+};
