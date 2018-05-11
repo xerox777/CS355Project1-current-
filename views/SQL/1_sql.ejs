@@ -13,17 +13,15 @@
 </head>
 <body style="background-color:aqua;">
 <br />
-<br />
-<br />
 #1)  A query using a correlated subquery
 <br />
-    CREATE PROCEDURE 1_sql()
-    BEGIN
-    SELECT computer, phone FROM products WHERE ecorp_id < (SELECT MAX(ecorp_id) FROM ecorp);
-    END //
-    DELIMITER;
+    CREATE PROCEDURE 1_sql() <br />
+    BEGIN <br />
+    SELECT computer, phone FROM products WHERE ecorp_id < (SELECT MAX(ecorp_id) FROM ecorp); <br />
+    END // <br />
+    DELIMITER; <br />
 <br />
-<br />
+
 <table border="1">
     <tr>
         <th>Computers</th>
