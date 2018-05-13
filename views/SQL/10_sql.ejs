@@ -26,13 +26,13 @@ DELIMITER; <br />
 
 <table border="1">
     <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
+        <th style="color:red; background-color:black;">First Name</th>
+        <th style="color:red; background-color:black;">Last Name</th>
     </tr>
     <% for (var i = 0; i < sql.length; i++) { %>
     <tr>
-        <td><%= sql[i].fname %></td>
-        <td><%= sql[i].lname %></td>
+        <td style="color:black; background-color:red;"><%= sql[i].fname %></td>
+        <td style="color:black; background-color:red;"><%= sql[i].lname %></td>
     </tr>
 
     <% } %>

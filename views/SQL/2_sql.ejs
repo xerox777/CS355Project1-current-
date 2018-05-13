@@ -30,9 +30,9 @@ join consumer_credit cc on cc.ecorp_id = e.ecorp_id; <br />
     </tr>
     <% for (var i = 0; i < sql.length; i++) { %>
     <tr>
-        <td style="color:black; background-color:green;"><%= sql[i].lname %></td>
-        <td style="color:black; background-color:purple;"><%= sql[i].address %></td>
-        <td style="color:black; background-color:white;"><%= sql[i].ecorpCount %></td>
+        <td style="color:black; background-color:red;"><%= sql[i].lname %></td>
+        <td style="color:black; background-color:red;"><%= sql[i].address %></td>
+        <td style="color:black; background-color:red;"><%= sql[i].ecorpCount %></td>
     </tr>
 
     <% } %>

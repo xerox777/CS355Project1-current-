@@ -15,22 +15,26 @@
 <br />
 #9) A query using a UNION
 <br />
-DROP PROCEDURE IF EXISTS sql2; <br />
-    SELECT c.lname, c.address, <br />
-  (SELECT Count(ecorp_id) FROM ecorp ) as ecorpCount <br />
-FROM customer c, ecorp e <br />
-join consumer_credit cc on cc.ecorp_id = e.ecorp_id; <br />
-<br />
+DROP PROCEDURE IF EXISTS sql9; <br />
+DELIMITER // <br />
+CREATE PROCEDURE sql9() <br />
+  BEGIN <br />
+select fname, lname FROM customer <br />
+UNION <br />
+  select fname, lname FROM consumer_credit <br />
+ORDER BY lname; <br />
+END // <br />
+DELIMITER; <br />
 
 <table border="1">
     <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
+        <th style="color:red; background-color:black;">First Name</th>
+        <th style="color:red; background-color:black;">Last Name</th>
     </tr>
     <% for (var i = 0; i < sql.length; i++) { %>
     <tr>
-        <td><%= sql[i].fname %></td>
-        <td><%= sql[i].lname %></td>
+        <td style="color:black; background-color:red;"><%= sql[i].fname %></td>
+        <td style="color:black; background-color:red;"><%= sql[i].lname %></td>
     </tr>
 
     <% } %>

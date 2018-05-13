@@ -33,13 +33,13 @@ CREATE PROCEDURE sql5() <br />
 Delimiter;
 <table border="1">
     <tr>
-        <th>Partner Name</th>
-        <th>Stock Trends</th>
+        <th style="color:red; background-color:black;">Partner Name</th>
+        <th style="color:red; background-color:black;">Stock Trends</th>
     </tr>
     <% for (var i = 0; i < sql.length; i++) { %>
     <tr>
-        <td><%= sql[i].partner %></td>
-        <td><%= sql[i].stock_trends %></td>
+        <td style="color:black; background-color:red;"><%= sql[i].partner %></td>
+        <td style="color:black; background-color:red;"><%= sql[i].stock_trends %></td>
     </tr>
 
     <% } %>

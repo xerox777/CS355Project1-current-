@@ -29,13 +29,13 @@ CREATE PROCEDURE sql3() <br />
 
 <table border="1">
     <tr>
-        <th>Computer</th>
-        <th>Phone</th>
+        <th style="color:red; background-color:black;">Computer</th>
+        <th style="color:red; background-color:black;">Phone</th>
     </tr>
     <% for (var i = 0; i < sql.length; i++) { %>
     <tr>
-        <td><%= sql[i].computer %></td>
-        <td><%= sql[i].phone %></td>
+        <td style="color:black; background-color:red;"><%= sql[i].computer %></td>
+        <td style="color:black; background-color:red;"><%= sql[i].phone %></td>
     </tr>
 
     <% } %>
