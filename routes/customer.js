@@ -29,5 +29,39 @@ router.get('/insert', function(req, res) {
     });
 });
 
+router.get('/edit', function(req, res) {
+    customer_dal.getinfo(req.query.ecorp_id, function(err, result){
+        if(err) {res.send(err); }
+        else {
+            res.render('customer/customer_update', {
+                customer: result[0],
+                ecorp_result: result[0][0]
+            });
+        }
+    });
+});
+
+router.get('/update', function(req, res) {
+    customer_dal.update(req.query, function(err, result){
+        if(err){
+            res.send(err);
+        } else {
+            res.redirect(302, '/customer/all');
+        }
+    });
+});
+
+
+router.get('/delete', function(req, res){
+    customer_dal.delete(req.query, function(err, result){
+        if(err){
+            res.send(err);
+        }
+        else {
+            res.redirect(302, '/customer/all');
+        }
+    });
+});
+
 
 module.exports = router;
