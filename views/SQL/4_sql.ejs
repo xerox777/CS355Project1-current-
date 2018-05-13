@@ -13,26 +13,33 @@
 </head>
 <body style="background-color:aqua;">
 <br />
-#2)  A query using a subquery in a JOIN
+#4)  A query using a subquery with EXISTS or NOT EXISTS
+
 <br />
-DROP PROCEDURE IF EXISTS sql2; <br />
-    SELECT c.lname, c.address, <br />
-  (SELECT Count(ecorp_id) FROM ecorp ) as ecorpCount <br />
-FROM customer c, ecorp e <br />
-join consumer_credit cc on cc.ecorp_id = e.ecorp_id; <br />
-<br />
+DROP PROCEDURE IF EXISTS sql4; <br />
+
+DELIMITER // <br />
+
+CREATE PROCEDURE sql4() <br />
+
+  BEGIN <br />
+    select partner, stock_trends FROM ecorp <br />
+    WHERE EXISTS (SELECT ecorp_id from consumer_credit where <br />
+      consumer_id > 1); <br />
+
+  end // <br />
+
+Delimiter; <br />
 
 <table border="1">
     <tr>
-        <th>Last Name</th>
-        <th>Address</th>
-        <th># of Ecorp Entries</th>
+        <th>Partner Name</th>
+        <th>Stock Trends</th>
     </tr>
     <% for (var i = 0; i < sql.length; i++) { %>
     <tr>
-        <td><%= sql[i].lname %></td>
-        <td><%= sql[i].address %></td>
-        <td><%= sql[i].ecorpCount %></td>
+        <td><%= sql[i].partner %></td>
+        <td><%= sql[i].stock_trends %></td>
     </tr>
 
     <% } %>

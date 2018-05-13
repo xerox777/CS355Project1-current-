@@ -13,26 +13,29 @@
 </head>
 <body style="background-color:aqua;">
 <br />
-#2)  A query using a subquery in a JOIN
+#3)  A query using a subquery with IN or NOT IN
 <br />
-DROP PROCEDURE IF EXISTS sql2; <br />
-    SELECT c.lname, c.address, <br />
-  (SELECT Count(ecorp_id) FROM ecorp ) as ecorpCount <br />
-FROM customer c, ecorp e <br />
-join consumer_credit cc on cc.ecorp_id = e.ecorp_id; <br />
+DROP PROCEDURE IF EXISTS sql3; <br />
+
+CREATE PROCEDURE sql3() <br />
+ < br />
+  BEGIN <br />
+    select computer, phone FROM products <br />
+    where product_id IN (SELECT Count(product_id) from products where <br />
+      product_id > 0); <br />
 <br />
+  end // <br />
+
 
 <table border="1">
     <tr>
-        <th>Last Name</th>
-        <th>Address</th>
-        <th># of Ecorp Entries</th>
+        <th>Computer</th>
+        <th>Phone</th>
     </tr>
     <% for (var i = 0; i < sql.length; i++) { %>
     <tr>
-        <td><%= sql[i].lname %></td>
-        <td><%= sql[i].address %></td>
-        <td><%= sql[i].ecorpCount %></td>
+        <td><%= sql[i].computer %></td>
+        <td><%= sql[i].phone %></td>
     </tr>
 
     <% } %>
