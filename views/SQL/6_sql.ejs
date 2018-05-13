@@ -13,13 +13,26 @@
 </head>
 <body style="background-color:aqua;">
 <br />
-#2)  A query using a subquery in a JOIN
+#6)  a query using GROUP BY
+
 <br />
-DROP PROCEDURE IF EXISTS sql2; <br />
+DROP PROCEDURE IF EXISTS sql6; <br />
+
+DELIMITER // <br />
+
+CREATE PROCEDURE sql6() <br />
+
+  BEGIN <br />
     SELECT c.lname, c.address, <br />
-  (SELECT Count(ecorp_id) FROM ecorp ) as ecorpCount <br />
-FROM customer c, ecorp e <br />
-join consumer_credit cc on cc.ecorp_id = e.ecorp_id; <br />
+      (SELECT Count(ecorp_id) FROM ecorp ) as ecorpCount <br />
+    FROM customer c, ecorp e <br />
+      join consumer_credit cc on cc.ecorp_id = e.ecorp_id <br />
+    GROUP BY lname; <br />
+
+  end // <br />
+
+Delimiter;
+
 <br />
 
 <table border="1">

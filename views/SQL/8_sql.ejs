@@ -13,26 +13,36 @@
 </head>
 <body style="background-color:aqua;">
 <br />
-#2)  A query using a subquery in a JOIN
+#8) A query using ORDER BY
+
 <br />
-DROP PROCEDURE IF EXISTS sql2; <br />
-    SELECT c.lname, c.address, <br />
-  (SELECT Count(ecorp_id) FROM ecorp ) as ecorpCount <br />
+
+DROP PROCEDURE IF EXISTS sql8; <br />
+DELIMITER // <br />
+CREATE PROCEDURE sql8() <br />
+  BEGIN <br />
+SELECT c.customer_id, c.lname, c.address, <br />
+  (SELECT MAX(ecorp_id) FROM ecorp ) as ecorpMAX <br />
 FROM customer c, ecorp e <br />
-join consumer_credit cc on cc.ecorp_id = e.ecorp_id; <br />
-<br />
+  join consumer_credit cc on cc.ecorp_id = e.ecorp_id <br />
+GROUP BY lname <br />
+ORDER BY customer_id; <br />
+    END // <br />
+DELIMITER ; <br />
 
 <table border="1">
     <tr>
+        <th>Customer ID</th>
         <th>Last Name</th>
         <th>Address</th>
-        <th># of Ecorp Entries</th>
+        <th>TOTAL # of Ecorp Entries</th>
     </tr>
     <% for (var i = 0; i < sql.length; i++) { %>
     <tr>
+        <td><%= sql[i].customer_id %></td>
         <td><%= sql[i].lname %></td>
         <td><%= sql[i].address %></td>
-        <td><%= sql[i].ecorpCount %></td>
+        <td><%= sql[i].ecorpMAX %></td>
     </tr>
 
     <% } %>
