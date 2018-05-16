@@ -35,9 +35,9 @@
                     <td><%= employee[i].street %></d>
                     <td><%= employee[i].city %></td>
                     <td><%= employee[i].zip %></d>
-                     <td> <a href='/employee/edit?employee_id=<%= employee[i].employee_id %>'> EDIT
+                     <td> <a href='/employee/edit?employee_id=<%= employee[i].employee_id %>'  class="btn btn-info" role="button"> EDIT
                     </a> </td>
-                    <td>&nbsp;<a href="/employee/delete?employee_id=<%= employee[i].employee_id %>">Delete</a></td
+                    <td>&nbsp;<a href="/employee/delete?employee_id=<%= employee[i].employee_id %>"  class="btn btn-info" role="button">Delete</a></td
                 </tr>
             <% } %>
         </table>

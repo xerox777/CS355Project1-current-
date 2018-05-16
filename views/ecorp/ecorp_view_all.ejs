@@ -37,9 +37,9 @@
                     <td style="color: black";><%= Ecorp[i].city %></d>
                     <td style="color: black";><%= Ecorp[i].state %></td>
                     <td style="color: black";><%= Ecorp[i].zip_code %></td>
-                    <td> <a href='/ecorp/edit?ecorp_id=<%= Ecorp[i].ecorp_id %>'> EDIT
+                    <td> <a href='/ecorp/edit?ecorp_id=<%= Ecorp[i].ecorp_id %>'  class="btn btn-info" role="button"> EDIT
                     </a> </td>
-                    <td>&nbsp;<a href="/ecorp/delete?ecorp_id=<%= Ecorp[i].ecorp_id %>">Delete</a></td>
+                    <td>&nbsp;<a href="/ecorp/delete?ecorp_id=<%= Ecorp[i].ecorp_id %>"  class="btn btn-info" role="button">Delete</a></td>
 
                 </tr>
             <% } %>
